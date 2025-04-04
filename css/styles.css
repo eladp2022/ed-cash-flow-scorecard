@@ -1,0 +1,100 @@
+/* Custom styles for the Cash Flow Protection Scorecard */
+
+/* Form input styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    @apply border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-full rounded-md shadow-sm;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    @apply h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300;
+}
+
+/* Question group hover effect */
+.question-group label:hover {
+    @apply bg-blue-50 border-blue-200;
+}
+
+/* Selected radio button styling */
+.question-group input[type="radio"]:checked + span {
+    @apply font-medium;
+}
+
+/* Progress bar animation */
+#progress-bar {
+    transition: width 0.3s ease-in-out;
+}
+
+/* Risk level colors */
+.bg-green-100 {
+    background-color: #d1fae5;
+}
+
+.text-green-800 {
+    color: #065f46;
+}
+
+.bg-yellow-100 {
+    background-color: #fef3c7;
+}
+
+.text-yellow-800 {
+    color: #92400e;
+}
+
+.bg-red-100 {
+    background-color: #fee2e2;
+}
+
+.text-red-800 {
+    color: #991b1b;
+}
+
+.bg-red-900 {
+    background-color: #7f1d1d;
+}
+
+/* Screen transitions */
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        @apply px-4;
+    }
+    
+    .text-3xl {
+        @apply text-2xl;
+    }
+    
+    .text-2xl {
+        @apply text-xl;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    
+    body {
+        @apply bg-white;
+    }
+    
+    .container {
+        @apply max-w-none px-0;
+    }
+    
+    .bg-white {
+        @apply bg-transparent;
+    }
+    
+    .shadow-sm {
+        @apply shadow-none;
+    }
+} 
